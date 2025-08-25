@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xavious Nyx Christening Invitation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #87CEEB 0%, #98E4FF 50%, #87CEEB 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Moving clouds and birds background */
+        .clouds {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .cloud {
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 120px;
+            height: 75px;
+            animation: moveCloud 25s linear infinite;
+        }
+
+        /* Different clouds with different animation speeds */
+        .cloud1 {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/009/302/650/small_2x/white-cloud-clipart-design-illustration-free-png.png');
+            top: 5%;
+            animation-delay: 0s;
+        }
+
+        .cloud2 {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/009/302/650/small_2x/white-cloud-clipart-design-illustration-free-png.png');
+            top: 15%;
+            animation-delay: -5s;
+        }
+
+        .cloud3 {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/009/302/650/small_2x/white-cloud-clipart-design-illustration-free-png.png');
+            top: 25%;
+            animation-delay: -10s;
+        }
+
+        .cloud4 {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/009/302/650/small_2x/white-cloud-clipart-design-illustration-free-png.png');
+            top: 35%;
+            animation-delay: -15s;
+        }
+
+        .cloud5 {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/009/302/650/small_2x/white-cloud-clipart-design-illustration-free-png.png');
+            top: 45%;
+            animation-delay: -20s;
+        }
+
+        .cloud6 {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/009/302/650/small_2x/white-cloud-clipart-design-illustration-free-png.png');
+            top: 55%;
+            animation-delay: -25s;
+        }
+
+        .cloud7 {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/009/302/650/small_2x/white-cloud-clipart-design-illustration-free-png.png');
+            top: 65%;
+            animation-delay: -30s;
+        }
+
+        .cloud8 {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/009/302/650/small_2x/white-cloud-clipart-design-illustration-free-png.png');
+            top: 75%;
+            animation-delay: -35s;
+        }
+
+        .cloud9 {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/009/302/650/small_2x/white-cloud-clipart-design-illustration-free-png.png');
+            top: 85%;
+            animation-delay: -40s;
+        }
+
+        .bird {
+            width: 40px;
+            height: 40px;
+            background: url('https://www.clipartkey.com/mpngs/m/79-791919_bird-silhouette-png.png') no-repeat center center;
+            background-size: contain;
+            animation: moveBird 20s linear infinite;
+        }
+
+        @keyframes moveCloud {
+            0% { left: -200px; }
+            100% { left: 100%; }
+        }
+
+        @keyframes moveBird {
+            0% { left: -150px; top: 30%; }
+            100% { left: 100%; top: 30%; }
+        }
+
+        .invitation-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px 30px;
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(255, 255, 255, 0.2);
+            position: relative;
+            animation: cardEntrance 1s ease-out;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes cardEntrance {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .baby-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            border: 6px solid #87CEEB;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+        }
+
+        .main-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 48px;
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-weight: 600;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #4682B4, #87CEEB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .child-name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 38px;
+            color: #4682B4;
+            margin-bottom: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .event-details {
+            background: rgba(135, 206, 235, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid rgba(135, 206, 235, 0.2);
+        }
+
+        .detail-item {
+            font-size: 16px;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        .bible-verses {
+            font-size: 16px;
+            color: #4682B4;
+            font-style: italic;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .invitation-card {
+                padding: 35px 25px;
+                margin: 10px;
+            }
+
+            .main-title {
+                font-size: 40px;
+            }
+
+            .child-name {
+                font-size: 32px;
+            }
+
+            .baby-photo {
+                width: 130px;
+                height: 130px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .invitation-card {
+                padding: 25px 20px;
+            }
+
+            .main-title {
+                font-size: 36px;
+            }
+
+            .child-name {
+                font-size: 28px;
+            }
+
+            .baby-photo {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Audio element for background music -->
+    <audio id="background-audio" autoplay loop>
+        <source src="./bg.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Background Clouds and Birds -->
+    <div class="clouds">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+        <div class="cloud cloud4"></div>
+        <div class="cloud cloud5"></div>
+        <div class="cloud cloud6"></div>
+        <div class="cloud cloud7"></div>
+        <div class="cloud cloud8"></div>
+        <div class="cloud cloud9"></div>
+        <div class="bird" style="animation-delay: -5s;"></div>
+        <div class="bird" style="animation-delay: -3s;"></div>
+    </div>
+
+    <!-- Invitation Card Content -->
+    <div class="invitation-card">
+        <img class="baby-photo" src="./xavious.jpg" alt="Xavious Nyx Axlton B. Tomaquin">
+        <div class="main-title">Christening Invitation</div>
+        <div class="child-name">Xavious Nyx Axlton B. Tomaquin</div>
+        <div class="event-details">
+            <div class="detail-item">Date: September 30, 2025</div>
+            <div class="detail-item">Time: 10:00 PM</div>
+            <div class="detail-item">Location: Duero Bohol Church, Duero Bohol</div>
+        </div>
+        <div class="bible-verses">
+            <p>"Let the little children come to me, and do not hinder them, for the kingdom of God belongs to such as these." - Mark 10:14</p>
+        </div>
+    </div>
+
+    <!-- JavaScript to play audio after page load -->
+    <script>
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('background-audio');
+            if (audio) {
+                audio.play().catch(function(error) {
+                    console.log('Autoplay blocked, waiting for user interaction');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
